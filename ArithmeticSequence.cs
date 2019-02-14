@@ -12,17 +12,19 @@ namespace PadawansTask2
             {
                 throw new ArgumentException();
             }
-           int sum = 0;
-           for (int i=0; i< count; i++)
+            int sum = 0;
+            for (int i = 0; i < count; i++)
             {
-                try
-                    { sum += number + i * add;}
-                catch (OverflowException)
+                sum += number + i * add;
+                if (sum >= int.MaxValue || sum <= int.MinValue)
                 {
                     throw new OverflowException();
                 }
+
             }
+            Console.WriteLine(sum);
             return sum;
         }
     }
+    
 }
