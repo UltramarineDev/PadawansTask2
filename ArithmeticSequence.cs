@@ -22,7 +22,6 @@ namespace PadawansTask2
                 }
 
             }
-            Console.WriteLine(sum);
             return sum;
         }
     }
